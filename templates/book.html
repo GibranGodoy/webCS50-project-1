@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<div class="container">
+		<div class="list-group">
+			{% for x in data %}
+				<a href="/isbn/{{ x.isbn }}" class="lsit-group-item list-group-item-action">
+					<h5 class="text-info">{{ x.title }}</h5>
+					by {{ x.author }} in {{ x.year }}
+					<h6 class="float-right">isbn: {{ x.isbn }}</h6>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
